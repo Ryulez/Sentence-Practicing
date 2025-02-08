@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Tense Sentences with Levels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+    background-size: 300% 300%;
+    animation: moveGradient 8s ease infinite;
+    position: relative;
+}
+
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .counter-box, .level-box {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+            width: 350px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .points {
+            font-size: 40px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .sentence {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .translation {
+            margin-top: 10px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #4c00a4, #1b5cc2);
+        }
+
+        .level-up, .completion-msg {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        /* For tablets (landscape and portrait) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .top-bar {
+        width: 90%;
+    }
+
+    .points {
+        font-size: 30px;
+    }
+
+    .sentence {
+        font-size: 16px;
+    }
+
+    .translation {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* For smaller mobile screens */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .counter-box, .level-box {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .points {
+        font-size: 25px;
+    }
+
+    .sentence {
+        font-size: 14px;
+    }
+
+    .translation {
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Full width for very small screens */
+@media screen and (max-width: 360px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sentence {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+    </style>
+</head>
+<body>
+  
+<div style="opacity:0; pointer-events: none;">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ba51b31bf66e1c9c8daf3a7e65575295',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {},
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/ba51b31bf66e1c9c8daf3a7e65575295/invoke.js"></script>
+
+
+<!-- 2nd -->
+<script async="async" data-cfasync="false" src="//pl25807526.effectiveratecpm.com/323a198c410f56ac065c956a191287e7/invoke.js"></script>
+<div id="container-323a198c410f56ac065c956a191287e7"></div>
+
+ 
+</div>
+
+<br><br>
+<div style="display: flex; flex-direction: column; align-items: center; position: absolute; left: 0; right: 0;">
+    <div class="top-bar">
+        <div class="level-box" id="level">Level 1</div>
+        <div class="counter-box" id="counter">Sentence 0 of 100</div>
+    </div>
+
+    <div class="container">
+        <h2>Your Points</h2>
+        <div class="points" id="points">0</div>
+
+        <div class="sentence" id="sentence">Click below to get a sentence</div>
+        <div class="translation" id="translation">-</div>
+
+        <button class="btn" onclick="nextSentence()">Next Sentence</button>
+    </div>
+
+    <div class="level-up" id="levelUp">
+        🎉 Congratulations! You are on Level <span id="newLevel"></span> 🎉
+    </div>
+
+    <div class="completion-msg" id="completion">
+        🎉 Congrats! You've completed all levels! 🎉
+    </div>
+</div>
+    <script>
+        let points = 0;
+        let currentSentence = 0;
+        let currentLevel = 1;
+
+        const sentences = [
+    // Level 1 (Low Complexity)
+    { eng: "I wake up early.", hin: "मैं सुबह जल्दी उठता हूँ।" },
+    { eng: "She drinks milk.", hin: "वह दूध पीती है।" },
+    { eng: "They play in the park.", hin: "वे पार्क में खेलते हैं।" },
+    { eng: "He eats an apple.", hin: "वह एक सेब खाता है।" },
+    { eng: "We go to school.", hin: "हम स्कूल जाते हैं।" },
+    { eng: "Birds fly in the sky.", hin: "पक्षी आकाश में उड़ते हैं।" },
+    { eng: "She sings a song.", hin: "वह एक गाना गाती है।" },
+    { eng: "I read books.", hin: "मैं किताबें पढ़ता हूँ।" },
+    { eng: "He writes a letter.", hin: "वह एक पत्र लिखता है।" },
+    { eng: "They watch TV.", hin: "वे टीवी देखते हैं।" },
+    { eng: "I listen to music.", hin: "मैं संगीत सुनता हूँ।" },
+    { eng: "He runs fast.", hin: "वह तेज़ दौड़ता है।" },
+    { eng: "She dances beautifully.", hin: "वह सुंदर नाचती है।" },
+    { eng: "We study every day.", hin: "हम रोज़ पढ़ाई करते हैं।" },
+    { eng: "The clock shows time.", hin: "घड़ी समय दिखाती है।" },
+    { eng: "He helps his mother.", hin: "वह अपनी माँ की मदद करता है।" },
+    { eng: "She laughs loudly.", hin: "वह ज़ोर से हंसती है।" },
+    { eng: "I brush my teeth.", hin: "मैं अपने दाँत ब्रश करता हूँ।" },
+    { eng: "We love our family.", hin: "हम अपने परिवार से प्यार करते हैं।" },
+    { eng: "The sun rises in the east.", hin: "सूरज पूरब से उगता है।" },
+
+    // Level 2 (Medium Complexity)
+    { eng: "The baby sleeps peacefully.", hin: "बच्चा शांति से सोता है।" },
+    { eng: "I exercise daily.", hin: "मैं रोज़ व्यायाम करता हूँ।" },
+    { eng: "She bakes delicious cakes.", hin: "वह स्वादिष्ट केक बनाती है।" },
+    { eng: "We visit our grandparents on Sundays.", hin: "हम रविवार को अपने दादा-दादी से मिलने जाते हैं।" },
+    { eng: "He speaks three languages.", hin: "वह तीन भाषाएँ बोलता है।" },
+    { eng: "They practice yoga every morning.", hin: "वे हर सुबह योग करते हैं।" },
+    { eng: "She enjoys painting landscapes.", hin: "वह प्राकृतिक दृश्य पेंट करना पसंद करती है।" },
+    { eng: "I prefer tea over coffee.", hin: "मैं चाय को कॉफी से अधिक पसंद करता हूँ।" },
+    { eng: "He drives carefully in traffic.", hin: "वह ट्रैफिक में सावधानी से गाड़ी चलाता है।" },
+    { eng: "The dog barks loudly at strangers.", hin: "कुत्ता अजनबियों पर ज़ोर से भौंकता है।" },
+    { eng: "She wears glasses while reading.", hin: "वह पढ़ते समय चश्मा पहनती है।" },
+    { eng: "They always arrive on time.", hin: "वे हमेशा समय पर पहुँचते हैं।" },
+    { eng: "We enjoy watching movies together.", hin: "हम साथ में फ़िल्में देखना पसंद करते हैं।" },
+    { eng: "The train leaves at 8 AM.", hin: "ट्रेन सुबह 8 बजे रवाना होती है।" },
+    { eng: "He often forgets his keys.", hin: "वह अक्सर अपनी चाबियाँ भूल जाता है।" },
+    { eng: "She participates in dance competitions.", hin: "वह डांस प्रतियोगिताओं में भाग लेती है।" },
+    { eng: "I love writing short stories.", hin: "मुझे छोटी कहानियाँ लिखना पसंद है।" },
+    { eng: "The river flows towards the sea.", hin: "नदी समुद्र की ओर बहती है।" },
+    { eng: "She sings in the school choir.", hin: "वह स्कूल के गायक दल में गाती है।" },
+
+    // Level 3 (High Complexity)
+    { eng: "I prefer traveling to new places every summer.", hin: "मैं हर गर्मियों में नए स्थानों की यात्रा करना पसंद करता हूँ।" },
+    { eng: "She always keeps a journal to record her thoughts.", hin: "वह हमेशा अपने विचारों को लिखने के लिए एक डायरी रखती है।" },
+    { eng: "They discuss innovative ideas in their weekly meetings.", hin: "वे अपनी साप्ताहिक बैठकों में नवीन विचारों पर चर्चा करते हैं।" },
+    { eng: "He continuously strives to improve his skills.", hin: "वह लगातार अपनी क्षमताओं को सुधारने का प्रयास करता है।" },
+    { eng: "She learns a new language every year.", hin: "वह हर साल एक नई भाषा सीखती है।" },
+    { eng: "The professor explains difficult topics in an easy way.", hin: "प्रोफेसर कठिन विषयों को सरल तरीके से समझाते हैं।" },
+    { eng: "He enjoys reading historical books about ancient civilizations.", hin: "वह प्राचीन सभ्यताओं के बारे में ऐतिहासिक किताबें पढ़ना पसंद करता है।" },
+    { eng: "The scientist researches the effects of climate change.", hin: "वैज्ञानिक जलवायु परिवर्तन के प्रभावों पर शोध करता है।" },
+    { eng: "She manages a large team at her workplace.", hin: "वह अपने कार्यस्थल पर एक बड़ी टीम का प्रबंधन करती है।" },
+    { eng: "He often volunteers for social work in his free time.", hin: "वह अपने खाली समय में सामाजिक कार्य के लिए स्वयंसेवा करता है।" },
+    { eng: "They regularly organize awareness campaigns for environmental issues.", hin: "वे पर्यावरणीय मुद्दों पर जागरूकता अभियान नियमित रूप से आयोजित करते हैं।" },
+    { eng: "The company invests in new technology every year.", hin: "कंपनी हर साल नई तकनीक में निवेश करती है।" },
+    { eng: "She studies ancient scripts to understand history.", hin: "वह इतिहास को समझने के लिए प्राचीन लिपियों का अध्ययन करती है।" },
+    { eng: "I analyze financial data to make informed decisions.", hin: "मैं सूचित निर्णय लेने के लिए वित्तीय डेटा का विश्लेषण करता हूँ।" },
+    { eng: "The artist experiments with different painting styles.", hin: "कलाकार विभिन्न चित्रकला शैलियों के साथ प्रयोग करता है।" },
+    { eng: "She explores different cultures through books.", hin: "वह किताबों के माध्यम से विभिन्न संस्कृतियों का पता लगाती है।" },
+    { eng: "He formulates new strategies to improve productivity.", hin: "वह उत्पादकता सुधारने के लिए नई रणनीतियाँ बनाता है।" },
+    { eng: "The engineer designs innovative solutions for modern problems.", hin: "इंजीनियर आधुनिक समस्याओं के लिए नवीन समाधान डिजाइन करता है।" },
+    { eng: "Congratulations! You have completed all levels!", hin: "बधाई हो! आपने सभी स्तर पूरे कर लिए हैं!" }
+];
+
+
+        function nextSentence() {
+            if (currentSentence >= 100) return;
+
+            points += 10;
+            smoothPointsTransition(points);
+
+            if (currentSentence % 10 === 0 && currentSentence !== 0) {
+                currentLevel++;
+                showLevelUp();
+            }
+
+            let randomIndex = Math.floor(Math.random() * sentences.length);
+            document.getElementById('sentence').textContent = sentences[randomIndex].eng;
+            document.getElementById('translation').textContent = sentences[randomIndex].hin;
+
+            currentSentence++;
+            document.getElementById('counter').textContent = `Sentence ${currentSentence} of 100`;
+            document.getElementById('level').textContent = `Level ${currentLevel}`;
+
+            if (currentSentence === 100) {
+                showCompletion();
+            }
+        }
+
+        function showLevelUp() {
+            document.getElementById('newLevel').textContent = currentLevel;
+            document.getElementById('levelUp').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('levelUp').style.display = 'none';
+            }, 2000);
+        }
+
+        function showCompletion() {
+            document.getElementById('completion').style.display = 'block';
+        }
+
+        function smoothPointsTransition(newPoints) {
+            let currentPoints = parseInt(document.getElementById('points').textContent);
+            let increment = newPoints > currentPoints ? 1 : -1;
+            let interval = setInterval(() => {
+                currentPoints += increment;
+                document.getElementById('points').textContent = currentPoints;
+                if (currentPoints === newPoints) {
+                    clearInterval(interval);
+                }
+            }, 30);
+        }
+    </script>
+
+</body>
+</html>
